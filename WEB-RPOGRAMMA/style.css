@@ -1,0 +1,233 @@
+/* Pamatstili */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Tumšā režīma iestatījumi */
+body {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode .navbar {
+    background-color: #222;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.dark-mode .learn-more {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode .learn-more:hover {
+    background-color: #666;
+}
+
+.dark-mode .modal-content {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Navigācijas izvēlne */
+.navbar {
+    background-color: #003366;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+/* Dropdown izvēlne pamatstāvoklī - slēpta */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    left: 0;
+    padding: 10px;
+    top: 100%; /* Pārliecinās, ka izvēlne parādās tieši zem "Services" */
+    white-space: nowrap;
+}
+
+/* Parādās tikai uz hover "Services" */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+    color: #ddd;
+}
+
+/* Hamburgera izvēlne mobilajām ierīcēm */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+/* Kartīšu izkārtojums */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #e0e0e0;
+    color: #003366;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.learn-more {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #555;
+}
+
+/* Modālais logs */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsivitāte */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-toggle input {
+    margin-left: 10px;
+}

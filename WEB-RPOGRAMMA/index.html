@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="menu-icon" id="menuIcon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navbarLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="services.html">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Budget Planning</a></li>
+                    <li><a href="#">Investment Advice</a></li>
+                    <li><a href="#">Debt Management</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <label class="dark-mode-toggle">
+            <input type="checkbox" id="darkModeToggle">
+            Dark Mode
+        </label>
+    </nav>
+
+    <!-- Introduction -->
+    <h1>Welcome to Financial Helper</h1>
+    <p>Your trusted guide for a brighter financial future.</p>
+
+    <!-- Service Cards -->
+    <div class="card-container">
+        <div class="card">
+            <img src="budget.jpg" alt="Budget Planner">
+            <h3>Budget Planner</h3>
+            <p>Get personalized budgeting advice to manage your finances effectively.</p>
+            <button class="learn-more" onclick="openModal('modal1')">Learn More</button>
+        </div>
+        <div class="card">
+            <img src="investment.jpg" alt="Investment Guide">
+            <h3>Investment Guide</h3>
+            <p>Discover investment options suited to your goals.</p>
+            <button class="learn-more" onclick="openModal('modal2')">Learn More</button>
+        </div>
+        <div class="card">
+            <img src="debt.jpg" alt="Debt Management">
+            <h3>Debt Management</h3>
+            <p>Find strategies to consolidate and manage your debt.</p>
+            <button class="learn-more" onclick="openModal('modal3')">Learn More</button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Budget Planner</h2>
+            <p>We offer personalized budgeting strategies to help you control your spending and save more.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Investment Guide</h2>
+            <p>Our investment guides help you choose options based on your financial goals and risk tolerance.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Debt Management</h2>
+            <p>Learn about effective ways to manage and reduce your debt efficiently.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
